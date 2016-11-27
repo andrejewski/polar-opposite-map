@@ -15,7 +15,7 @@ localLayer.addTo(localMap)
 remoteLayer.addTo(remoteMap)
 
 function opposite (latlng) {
-  var lng = latlng.lng > 0 ? 180 - latlng.lng : 180 + latlng.lng
+  var lng = latlng.lng > 0 ? latlng.lng - 180 : latlng.lng + 180
   return L.latLng(-latlng.lat, lng)
 }
 
